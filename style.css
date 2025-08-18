@@ -180,7 +180,46 @@ main {
     margin-bottom: 1rem;
     text-align: center;
 }
+/* 下滑阅读功能样式 */
+.fullscreen-modal {
+  scroll-behavior: smooth; /* 平滑滚动 */
+  overflow-y: auto; /* 确保可滚动 */
+}
 
+.scroll-indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(243, 156, 18, 0.7);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3002;
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-15px) translateX(-50%); }
+  60% { transform: translateY(-7px) translateX(-50%); }
+}
+
+/* 章节内容分块 */
+.chapter-page {
+  min-height: 100vh; /* 每屏高度 */
+  padding-bottom: 60px; /* 留出滚动空间 */
+  position: relative;
+}
 /* 模态框样式 */
 .modal {
     display: none;
@@ -447,4 +486,5 @@ main {
     .reader-btn {
         margin: 0.2rem;
     }
+
 }
