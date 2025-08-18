@@ -3,8 +3,8 @@ const novelsData = [
     {
         id: 1,
         title: "贵妃，你怎么才找到我",
-        description: "一个关于宫廷爱情与权力的故事，讲述贵妃与皇帝之间复杂的情感纠葛。",
-        tags: ["宫廷", "爱情", "权谋"],
+        description: "讲述贵妃与皇帝之间复杂的情感纠葛。",
+        tags: ["情侣"],
         volumes: [
             {
                 title: "第一卷：我们的故事",
@@ -447,7 +447,91 @@ function showChapters(novelId, volume, volumeIndex) {
 function showChapterContent(novelTitle, volumeTitle, chapter, chapterIndex, volumeIndex) {
     currentChapterIndex = chapterIndex;
     currentVolumeIndex = volumeIndex;
+    // 在showChapterContent函数中修改内容分页
+function showChapterContent(novelTitle, volumeTitle, chapter, chapterIndex, volumeIndex) {
+  // 原有代码不变...
+  
+  // 将章节内容分页
+  const contentParts = splitContentIntoPages(chapter.content);
+  const readerContent = document.getElementById('reader-content');
+  readerContent.innerHTML = '';
+  
+  contentParts.forEach((part, index) => {
+    const pageDiv = document.createElement('div');
+    pageDiv.className = 'chapter-page';
+    pageDiv.innerHTML = `<p>${part}</p>`;
+    if(index === contentParts.length - 1) {
+      pageDiv.style.paddingBottom = '150px'; // 最后一页留出评论空间
+    }
+    readerContent.appendChild(pageDiv);
+  });
+  
+  // 初始化滚动功能
+  initScrollReading();
+}
+
+// 内容分页函数
+function splitContentIntoPages(content) {
+  const words = content.split(' ');
+  const wordsPerPage = 300; // 每页约300词
+  const pages = [];
+  
+  for(let i = 0; i < words.length; i += wordsPerPage) {
+    pages.push(words.slice(i, i + wordsPerPage).join(' '));
+  }
+  
+  return pages;
+}
+// 添加触摸滑动支持
+let touchStartY = 0;
+document.addEventListener('touchstart', (e) => {
+  touchStartY = e.touches[0].clientY;
+}, {passive: true});
+
+document.addEventListener('touchend', (e) => {
+  const touchEndY = e.changedTouches[0].clientY;
+  const deltaY = touchStartY - touchEndY;
+  
+  if(deltaY > 50) { // 上滑
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  } else if(deltaY < -50) { // 下滑
+    window.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+  }
+}, {passive: true});
+// 初始化滚动阅读
+function initScrollReading() {
+  // 滚动指示器点击事件
+  document.querySelector('.scroll-indicator').addEventListener('click', () => {
+    const currentScroll = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const nextPosition = currentScroll + windowHeight * 0.8;
     
+    window.scrollTo({
+      top: nextPosition,
+      behavior: 'smooth'
+    });
+  });
+  
+  // 自动隐藏指示器
+  window.addEventListener('scroll', () => {
+    const indicator = document.querySelector('.scroll-indicator');
+    const isNearBottom = window.innerHeight + window.scrollY >= 
+                        document.body.offsetHeight - 100;
+    
+    indicator.style.display = isNearBottom ? 'none' : 'flex';
+  });
+  
+  // 键盘控制
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'ArrowDown' || e.key === ' ') {
+      e.preventDefault();
+      window.scrollBy({
+        top: window.innerHeight * 0.8,
+        behavior: 'smooth'
+      });
+    }
+  });
+}
     // 设置全屏阅读器内容
     document.getElementById('reader-title').innerHTML = `
         ${novelTitle} <small>> ${volumeTitle} > ${chapter.title}</small>
@@ -632,3 +716,4 @@ function initReaderControls() {
     });
 
 }
+
