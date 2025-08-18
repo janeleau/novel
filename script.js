@@ -447,9 +447,6 @@ function showChapters(novelId, volume, volumeIndex) {
 function showChapterContent(novelTitle, volumeTitle, chapter, chapterIndex, volumeIndex) {
     currentChapterIndex = chapterIndex;
     currentVolumeIndex = volumeIndex;
-    // 在showChapterContent函数中修改内容分页
-function showChapterContent(novelTitle, volumeTitle, chapter, chapterIndex, volumeIndex) {
-  // 原有代码不变...
   
   // 将章节内容分页
   const contentParts = splitContentIntoPages(chapter.content);
@@ -481,6 +478,17 @@ function splitContentIntoPages(content) {
   }
   
   return pages;
+}
+// 在滚动时保存进度
+window.addEventListener('scroll', _.throttle(() => {
+  const currentPage = Math.round(window.scrollY / window.innerHeight);
+  localStorage.setItem(`progress-${currentChapterId}`, currentPage);
+}, 1000));
+
+// 加载时恢复进度
+function restoreReadingProgress() {
+  const savedPage = localStorage.getItem(`progress-${currentChapterId}`) || 0;
+  window.scrollTo(0, savedPage * window.innerHeight);
 }
 // 添加触摸滑动支持
 let touchStartY = 0;
@@ -716,4 +724,5 @@ function initReaderControls() {
     });
 
 }
+
 
