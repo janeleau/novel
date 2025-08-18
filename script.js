@@ -1,7 +1,7 @@
 // 小说数据
 const novelsData = [
     {
-        id: 1,
+       id: 1,
         title: "贵妃，你怎么才找到我",
         description: "讲述贵妃与皇帝之间复杂的情感纠葛。",
         tags: ["情侣"],
@@ -13,33 +13,55 @@ const novelsData = [
                         title: "第一章 Y先生的日常",
                         content: `
                             <h3>No1.</h3>
-                            <p>昨天Y生在床上威胁我，"你以前说过的我都记得"。</p>
-                            <p>本来他光着膀子我就已经蠢蠢欲动了。我马上扑过去，缠住他的胸。</p>
-                            <p>于是在我艰难的色诱下，他终于松口："你想想自己做过哪些承诺。"</p>
-                            <p>Y说我不该记得的倒都记得清清楚楚。</p>
-                            <p>我承认我说过很多话，但是记性不好，所以说过了就忘了。Y每件事记得清清楚楚。他记得清楚却从来不肯说，让我猜。还没在一起那会儿，他说我过日子挺糊涂的，没想到这么早就被看穿了。枉费我天天装一个向上的三好女强人。况且他一说我莫名觉得理亏，好汉不吃眼前亏，打算放他一马，于是不再逼问他我的优点。</p>
+                            <p>我老是问Y我的优点是什么，缺点是什么，从不厌烦。同居之前——</p>
+                            <p>Y同学如实回答："肤白貌美，前凸后翘。小鸟依人，善解人意，软软的。时而温柔，时而可爱，时而活泼。"</p>
+                            <p>同居以后——</p>
+                            <p>"会做饭，会洗衣。"</p>
+                            <p>"还有呢？"</p>
+                            <p>"没了。"</p>
+                            <p>......</p>
+                            <p>你老婆如此贤惠聪明居然都看不到?</p>
+                            <p>我觉得我做饭不好吃，Y同学不嫌弃我这要归功性格里不挑食的习惯。</p>
+                            <p>"真的好吃吗？""反正比食堂好吃。"不愧是我老公，净说些我喜欢听的一些大实话。</p>
+                            <p>衣服有洗衣机洗，有一次Y打算把一些不是当季穿的衣服洗了，我指着床单："床单也得要洗了，都三月了。"</p>
+                            <p>他笑"是的啊。所以你为什么不洗？"我想，他忙的时候我多体谅他，有求必应。不过我执行力很差，不知道什么时候能做到。Y同学...直到我第三次延误火车他才知道原来真有人不出意外还是赶不到火车。</p>
+                            <p>有一天我又来了兴致，问他我的缺点是什么。</p>
+                            <p>Y生一反常态，说鄙人唯一的缺点是爱生气。</p>
+                            <p>我装作很不解的样子：</p>
+                            <p>"以前我问你喜欢我哪一点，你说哪里都喜欢。没什么理由就是喜欢。"</p>
+                            <p>他说，那就是你变了。</p>
+                            <p>我说，我没变。</p>
+                            <p>他说，那就更严重了。</p>
+                            <p>......</p>
+                            <p>我翻到以前的微信聊天记录：</p>
+                            <p>"没有什么理由就是喜欢，是发自内心的喜欢"</p>
+                            <p>"可能你方方面面都是我喜欢你的理由。"</p>
 
                             <h3>No2.</h3>
-                            <p>Y无论做什么都非常严谨认真。我们第一次爆发大规模争吵的原因仅仅是因为我没赶上火车，死活都不肯给我改签。</p>
+                            <p>昨天晚上Y先生在床上威胁我，"你以前说过的我都记得"。</p>
+                            <p>本来他光着膀子我就已经蠢蠢欲动了。我马上扑过去，缠住他的胸。</p>
+                            <p>在我艰难的色诱下，他终于松口："你想想自己做过哪些承诺。"</p>
+                            <p>Y说，不该记得的我记得清清楚楚。</p>
+                            <p>Y每件事记得清清楚楚。他记得清楚却从来不肯说，让我猜。我说过很多话，但是记性不好，所以说过了就忘了。还没在一起那会儿，他说我过日子挺糊涂的，没想到这么早就被看穿了。枉费我天天装一个向上的三好女强人。况且他一说我莫名觉得理亏，好汉不吃眼前亏，打算放他一马，于是不再逼问他我的优点。</p>
+
+
+                            <h3>No3.</h3>
+                           <p>Y无论做什么都非常严谨认真。我们第一次爆发大规模争吵的原因仅仅是因为我没赶上火车，死活都不肯给我改签。</p>
                             <p>他说，没见过有人能算好时间还能延误上火车的。这种事在我身上从来没发生过。</p>
                             <p>我内心OS：延误火车对我来说是家常便饭。我要是有钱一点，延误飞机也不成问题。</p>
                             <p>但我还是捋他的毛，这肯定是最后一次了，我这个人最大的优点就是说到做到。</p>
-                            <p>Y生后来才知道这都是骗人的，还逼问我到底隐瞒了他哪些事。我说想起来再跟你讲，太多了我都不记得了......</p>
+                            <p>Y生后来才知道这都是骗人的，还逼问我到底隐瞒了他哪些事。我说想起来再讲，太多了我都不记得了......</p>
                             <p>终于，在最后一刻确定我是真的赶不上之后，给我退票了，重新买的下一趟车，但是硬卧变硬座。</p>
                             <p>怪我不知道火车48h之前才可以改签的。这也成为后来他嘲笑我缺乏常识的论据之一。</p>
                             <p>彼时我囊中羞涩，他说我寅吃卯粮。为了还信用卡我吃了好多顿泡面，坐火车一直都是绿皮硬座。他又心疼我，买的硬卧。</p>
                             <p>据他后来形容，我第一次告诉他我回家坐硬座的时候他整宿睡不好，后悔没给我买一张硬卧票。这人心里有什么事会失眠，我们在一起第一天晚上也整宿没睡。</p>
                             <p>这次又只能坐硬座，我安慰他说，我就是坐硬座的命。以后交通的价格降下来了，我就坐飞机。哈哈哈飞机我肯定不敢延误。我又骗了他......</p>
 
-                            <h3>No3.</h3>
-                            <p>Y每天离开实验室很晚，恨不得周末也泡在实验室里和实验室抱着睡吧。有次实验室人都走了，带着耳机给我打语音，打了半个小时，一个师弟回来了请教事情，又恢复了正经严肃的样子，连音色都变了。我目瞪口呆，这厮看着平时不显山不露水，居然切换得如此丝滑。对爸妈也是一副高冷的样子，从来报喜不报忧，我知道他担心父母忧虑远行。</p>
-                            <p>Y比我更有仪式感，我怀疑就算不是遇到我也能待其他人一样。我在感情上天生没有安全感，父母恩爱夫妻不疑什么样子我都想象不到。这是我十分想确定我在Y心目中的优缺点和他为什么喜欢我的原因，我一直认为我没什么可被他喜欢的。</p>
-                            <p>Y的朋友经历爱情长跑之后都结婚了，而我的朋友经历爱情长跑后（八年以上）互删微信各自嫁娶层出不穷。</p>
-                            <p>Y说你的朋友都不太正常。</p>
-                            <p>......</p>
 
                             <h3>No4.</h3>
-                            <p>某天晚上Y同学从实验室回来兴致不错，心情很好，不像是和科研虐恋情深的样子。回来给我一个大大的拥抱，脱衣服直奔卫生间，洗澡哼着歌？平常说自己五音不全不亮嗓子的人才是我的老公。雷嗨bingo？</p>
+                            <p>Y每天离开实验室很晚，恨不得周末也泡在实验室里和实验室抱着睡吧。有次实验室人都走了，带着耳机给我打语音，打了半个小时，一个师弟回来了请教事情，又恢复了正经严肃的样子，连音色都变了。我目瞪口呆。这厮看着平时不显山不露水，居然切换得如此丝滑。对爸妈也是一副高冷的样子，从来报喜不报忧，我知道他担心父母忧虑远行。</p>
+                            
+<p>某天晚上Y同学从实验室回来兴致不错，心情很好，不像是和科研虐恋情深的样子。回来给我一个大大的拥抱，脱衣服直奔卫生间，洗澡哼着歌？平常说自己五音不全不亮嗓子的人才是我的老公。雷嗨bingo？</p>
                             <p>躺在床上我在想今儿什么事这么高兴。旁边Y同学休息好了，本来四仰八叉，转过来说："你求我"。</p>
                             <p>聪明如我，当然立马反应过来。</p>
                             <p>"小妞挺嚣张啊"，这明明是我的台词。</p>
@@ -47,29 +69,12 @@ const novelsData = [
                             <p>严肃正经的Y同学已经被我带坏，是带偏。</p>
                             <p>一去不返。</p>
 
-                            <h3>No5.</h3>
-                            <p>我不那么冒昧地觉得在Y同学心里我可能还算是个美女。毕竟他们专业女生屈指可数。有也追不到，我咯噔一下，好像搞得我很容易追到手一样，害我觉得我这个黄花大闺女闺中待字便宜了这小子。不过好在没有情史，甚合吾意。</p>
-                            <p>高中时我那个感天动地的好闺蜜给我起绰号叫做"小眼"。高二的时候我在鼻头上长了个三胞胎，三个摸上去很硬的痘痘连成一体，挤出来血崩一地，后来感染导致皮肤增生，该长的地方不长全长到痘痘坑的隔壁了，几次激光都消不掉，放大了估计和月球表面相似度99%。</p>
-                            <p>Y同学姓杨，我赐他名为杨贵妃。刚在一起时，QQ情侣空间里有个小问答是要说出对方三个优点。在我的私相授受下，Y坦言相告，知无不言又言无不尽：肤白貌美，前凸后翘，时而温柔时而可爱时而活泼，小鸟依人，善解人意。</p>
-                            <p>我心花怒放，看不出来年纪轻轻竟然有这般见识。或者爱妃太懂我了，朕从古至今蓝颜知己第一人非你莫属。当即打算大笔一就，诚实是Y同学身上最大的优点。碍于刚刚确定关系，我还是谨慎地写上"没有缺点，全是优点"。在我后来不谦虚的时候，Y生却再也没说过这么靠谱的话了。</p>
-                            <p>"这个结论怎么得出来的。不会是自动加的滤镜吧"</p>
-                            <p>这厮说的是我吗，我既不肤白又不貌美，前凸后翘更谈不上。虽然Y只要认为他的老婆长得跟仙女下凡似的，那到底是什么样无伤大雅。但主观终究会被客观改造......意淫是坏习惯，我得实事求是。"你是我老婆，我怎么看你都是肤白貌美，前凸后翘。其他人我才没兴趣看。"</p>
-                            <p>我说荷尔蒙的滤镜只能维持三个月，第四个月就破掉了。</p>
-                            <p>周末去约会，我羡慕他双眼皮高鼻子，"以后的小孩要是像你就好了。"</p>
-                            <p>"无所谓。只要性格不像你就好。"</p>
+                             <h3>No5.</h3>
+                            <p>Y同学比我更有仪式感，我怀疑他就算不是遇到我也能待其他人一样好。我在感情上天生没有安全感，父母恩爱夫妻不疑什么样子我都想象不到。这是我十分想确定我在Y心目中的优缺点和他为什么喜欢我的原因，我一直认为我没什么可被他喜欢的。</p>
+                            <p>Y的朋友经历爱情长跑之后都结婚了，而我的朋友经历爱情长跑后（八年以上）互删微信各自嫁娶层出不穷。</p>
+                            <p>Y说你的朋友都不太正常。</p>
                             <p>......</p>
-                            <p>三个月后Y生留言"喜欢超过三个月之后就是爱了，你说我对你的喜欢不会超过三个月，但是我每天都比前一天更喜欢你。这就是爱吧。"</p>
-                            <p>事实证明，这丫就是没见识。同居之后有天他侧过身捆住，低头突然开口："你是平胸"，笑得不怀好意。</p>
-                            <p>"啊呀呀"，我惊叫起来，"你终于说实话了"，一边扯着嗓子吼叫："你终于说出来了......你还是说出来了......"我力气小，用尽全力也破不了功。</p>
-                            <p>"好歹我是你老婆"</p>
-                            <p>听及，他伸出一只手，另外一只把我压着。"不对说错了。再来"，过会，"C"</p>
-                            <p>我冲他喊："是B啊我是B……"</p>
-                            <p>"以前你不是说和F差不多吗？"</p>
-                            <p>"你肯定听错了，我说的明明是差好多"</p>
-                            <p>此后细想，我就是被Y"我不会说情话，说的全是真心话"的这种言论哄骗了的。</p>
-
-                            <h3>No6.</h3>
-                            <p>我对Y的第一印象是聪明，冷静，脸上没表情。</p>
+<p>我对Y的第一印象是聪明，冷静，脸上没表情。</p>
                             <p>Y天性高冷，生人勿近，刚恋爱那会送我一个镯子。</p>
                             <p>看他煞有仪式地帮我戴上，严肃、严谨、专注......我不由得升起一股对科研人员的敬意——Respect。</p>
                             <p>我心想这和电视剧里演的根本不一样！哪有什么浪漫......</p>
@@ -83,50 +88,50 @@ const novelsData = [
                             <p>"遇见你是我前半生最开心的事，我想用这份礼物表达在余生将你牢牢'圈住'，余生只疼爱你一人。"</p>
                             <p>2023年4月22日。</p>
 
-                            <h3>No7.</h3>
-                            <p>我老是问Y我的优点是什么，缺点是什么，从不厌烦。同居之前——</p>
-                            <p>Y同学如实回答："肤白貌美，前凸后翘。小鸟依人，善解人意，软软的。时而温柔，时而可爱，时而活泼。"</p>
-                            <p>同居以后——</p>
-                            <p>"会做饭，会洗衣。"</p>
-                            <p>"还有呢？"</p>
-                            <p>"没了。"</p>
+<h3>No6.</h3>
+                            <p>我不那么冒昧地觉得我在Y同学心里可能算是美女。毕竟他们专业女生屈指可数。有也追不到，我咯噔一下，好像搞得我很容易追到手一样，害我那时觉得我这个黄花大闺女闺中待字便宜了这小子。不过好在没有情史，甚合吾意。</p>
+                            <p>高中时我那个感天动地的好闺蜜给我起绰号叫做"小眼"。高二的时候我在鼻头上长了个三胞胎，三个摸上去很硬的痘痘连成一体，挤出来血崩一地，后来感染导致皮肤增生，该长的地方不长全长到痘痘坑的隔壁了，几次激光都消不掉，放大了估计和月球表面相似度99%。</p>
+                            <p>Y同学姓杨，我赐他名为杨贵妃。刚在一起时，QQ情侣空间里有个小问答是要说出对方三个优点。在我的私相授受下，Y坦言相告，知无不言又言无不尽。肤白貌美，前凸后翘，时而温柔时而可爱时而活泼，小鸟依人，善解人意。</p>
+                            <p>我心花怒放，看不出来年纪轻轻竟然有这般见识前途无忧。或者爱妃太懂我了，朕从古至今蓝颜知己第一人非你莫属。当即打算大笔一就，诚实乃Y同学最大的优点。碍于刚开始确定关系，我还是谨慎地写上"没有缺点，全是优点"。在我后来不谦虚的时候，Y生却再也没说过这么靠谱的话了。</p>
+                            <p>
+                            <p>但是，我既不肤白又不貌美，前凸后翘更谈不上。虽然只要Y认为他的老婆长得跟仙女下凡似的，那到底长什么样都无伤大雅。但是主观终究会被客观改造......意淫是坏习惯，我得实事求是。"这个结论怎么得出来的。不会是自动加的滤镜吧"。</p>"你是我老婆，我怎么看你都是肤白貌美，前凸后翘。其他人我才没兴趣看。"</p>
+                            <p>我说荷尔蒙的滤镜只能维持三个月，到了第四个月就会破掉。</p>
+                            <p>周末出去约会，我羡慕他这双眼皮高鼻子，"以后的小孩要是像你就好了。"</p>
+                            <p>"无所谓。只要性格不像你就好。"</p>
                             <p>......</p>
-                            <p>你老婆如此贤惠聪明居然看不到吗。</p>
-                            <p>我做饭不好吃。Y同学不嫌弃我这要归功他性格里不挑食的好习惯。</p>
-                            <p>"真的好吃吗？""反正比食堂好吃。"不愧是我老公，净说些我喜欢听的一些大实话。</p>
-                            <p>衣服有洗衣机洗，有一次Y打算把一些不是当季穿的衣服洗了，我指着床单说："床单也得要洗了，都三月了。"</p>
-                            <p>他笑"是的啊。所以你为什么不洗？"我想，他忙的时候我多体谅他，有求必应。不过我执行力很差，不知道什么时候能做到。Y同学...直到我第三次延误火车他才知道原来真有人不出意外还是赶不到火车。</p>
-                            <p>有一天我又有兴致，问我的缺点是什么。</p>
-                            <p>Y生一反常态，说鄙人唯一的缺点是爱生气。</p>
-                            <p>我装作很不解的样子：</p>
-                            <p>"以前我问你喜欢我哪一点，你说哪里都喜欢。没什么理由就是喜欢。"</p>
-                            <p>他说，那就是你变了。</p>
-                            <p>我说，我没变。</p>
-                            <p>他说，那就更严重了。</p>
-                            <p>......</p>
-                            <p>我翻到以前的微信聊天记录：</p>
-                            <p>"没有什么理由就是喜欢，是发自内心的喜欢"</p>
-                            <p>"可能你方方面面都是我喜欢你的理由。"</p>
+                            <p>三个月后，Y生留言"喜欢超过三个月之后就是爱了，你说我对你的喜欢不会超过三个月，但是我每天都比前一天更喜欢你。这就是爱吧。"</p>
+                            <p>但是事实证明，这丫就是没见识。同居之后某天他突然侧过身捆住我，低下头突然开口："你是平胸"。还笑得不怀好意。</p>
+                            <p>"啊呀呀"，我叫起来，"你终于说实话了"，一边扯着嗓子吼："你终于说出来了......你还是说出来了......"我力气小，用尽全力也破不了功。</p>
+                            <p>"好歹我是你老婆"</p>
+                            <p>听及，他伸出一只手，另外一只把我压着。"不对说错了。再来"，过会，"C"</p>
+                            <p>我冲他喊："是B啊我是B……"</p>
+                            <p>"以前你不是说和F差不多吗？"</p>
+                            <p>"你肯定听错了，我说的明明是差好多"</p>
+                            <p>我就是被Y"我不会说情话，说的全是真心话"的这种言论哄骗的。</p>
 
-                            <h3>No8.</h3>
-                            <p>Y先生干着家务，干得很卖力，我不好意思地躺在床上看手机。我琢磨着Y也许具有和我同样的想法。</p>
-                            <p>我跑过去摸Y的胸口："扪心自问，你老婆漂亮吗？"</p>
+                           
+
+                            <h3>No7.</h3>
+                            
+                                                        <p>某天下午Y先生干着家务，我不好意思地躺在床上看手机。我琢磨着Y也许具有和我同样的想法。</p>
+                            <p>我跑过去摸Y胸口："扪心自问，你老婆漂亮吗？"</p>
                             <p>"漂亮"</p>
-                            <p>"你老婆可爱吗？"</p>
+                            <p>"可爱吗？"</p>
                             <p>"可爱"</p>
                             <p>"那你老婆贤惠吗？"</p>
                             <p>"贤惠"</p>
                             <p>"你老婆懒吗？"</p>
                             <p>停顿了一秒，面不改色：</p>
                             <p>"勤快"</p>
-                            <p>"啊呀！"</p>
-                            <p>这个男人笑眯眯看着我。呵，双眼皮不错。</p>
-                            <p>"你这算哪门子的扪心自问！"</p>
+                            <p>"？"</p>
+                            <p>这个男人笑眯眯看着我。</p>
+                            <p>"你这是哪门子扪心自问！"</p>
                             <p>"我还是有自知之明的。"</p>
-                            <p>Y："有自知之明就好有自知之明就好……"前俯后仰。</p>
+                            <p>Y前俯后仰，"有自知之明就好有自知之明就好……"。</p>
 
                             <h3>No9.</h3>
-                            <p>刚认识时Y读博，我考研调剂上海。后来疫情封城，下学期才见成。</p>
+                            <p>刚认识时Y读博，我考研到上海。后来疫情封城，下学期才见成。</p>
+<p>老实说，Y先生是完美居家、事业、顾家级人才，简称三好男人。Y先生平静多年的人生被我打破了。不过我仍然对于Y先生在他的计划之中如此具有远见找了我作对象感觉十分之欣慰。毕竟，从来没有体验过变数的人生，多么无趣呀。至于后来......Y先生人生中最大的变数是鄙人。<p>
                  `
                     },
                     {
@@ -445,101 +450,11 @@ function showChapters(novelId, volume, volumeIndex) {
  * @param {number} volumeIndex - 卷索引
  */
 function showChapterContent(novelTitle, volumeTitle, chapter, chapterIndex, volumeIndex) {
+
     currentChapterIndex = chapterIndex;
     currentVolumeIndex = volumeIndex;
-  
-  // 将章节内容分页
-  const contentParts = splitContentIntoPages(chapter.content);
-  const readerContent = document.getElementById('reader-content');
-  readerContent.innerHTML = '';
-  
-  contentParts.forEach((part, index) => {
-    const pageDiv = document.createElement('div');
-    pageDiv.className = 'chapter-page';
-    pageDiv.innerHTML = `<p>${part}</p>`;
-    if(index === contentParts.length - 1) {
-      pageDiv.style.paddingBottom = '150px'; // 最后一页留出评论空间
-    }
-    readerContent.appendChild(pageDiv);
-  });
-  
-  // 初始化滚动功能
-  initScrollReading();
-}
 
-// 内容分页函数
-function splitContentIntoPages(content) {
-  const words = content.split(' ');
-  const wordsPerPage = 300; // 每页约300词
-  const pages = [];
-  
-  for(let i = 0; i < words.length; i += wordsPerPage) {
-    pages.push(words.slice(i, i + wordsPerPage).join(' '));
-  }
-  
-  return pages;
-}
-// 在滚动时保存进度
-window.addEventListener('scroll', _.throttle(() => {
-  const currentPage = Math.round(window.scrollY / window.innerHeight);
-  localStorage.setItem(`progress-${currentChapterId}`, currentPage);
-}, 1000));
-
-// 加载时恢复进度
-function restoreReadingProgress() {
-  const savedPage = localStorage.getItem(`progress-${currentChapterId}`) || 0;
-  window.scrollTo(0, savedPage * window.innerHeight);
-}
-// 添加触摸滑动支持
-let touchStartY = 0;
-document.addEventListener('touchstart', (e) => {
-  touchStartY = e.touches[0].clientY;
-}, {passive: true});
-
-document.addEventListener('touchend', (e) => {
-  const touchEndY = e.changedTouches[0].clientY;
-  const deltaY = touchStartY - touchEndY;
-  
-  if(deltaY > 50) { // 上滑
-    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-  } else if(deltaY < -50) { // 下滑
-    window.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
-  }
-}, {passive: true});
-// 初始化滚动阅读
-function initScrollReading() {
-  // 滚动指示器点击事件
-  document.querySelector('.scroll-indicator').addEventListener('click', () => {
-    const currentScroll = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const nextPosition = currentScroll + windowHeight * 0.8;
     
-    window.scrollTo({
-      top: nextPosition,
-      behavior: 'smooth'
-    });
-  });
-  
-  // 自动隐藏指示器
-  window.addEventListener('scroll', () => {
-    const indicator = document.querySelector('.scroll-indicator');
-    const isNearBottom = window.innerHeight + window.scrollY >= 
-                        document.body.offsetHeight - 100;
-    
-    indicator.style.display = isNearBottom ? 'none' : 'flex';
-  });
-  
-  // 键盘控制
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'ArrowDown' || e.key === ' ') {
-      e.preventDefault();
-      window.scrollBy({
-        top: window.innerHeight * 0.8,
-        behavior: 'smooth'
-      });
-    }
-  });
-}
     // 设置全屏阅读器内容
     document.getElementById('reader-title').innerHTML = `
         ${novelTitle} <small>> ${volumeTitle} > ${chapter.title}</small>
@@ -558,6 +473,8 @@ function initScrollReading() {
     
     // 更新导航按钮状态
     updateReaderNavButtons();
+initPullToRead();
+
 }
 
 /**
@@ -722,7 +639,76 @@ function initReaderControls() {
             );
         }
     });
-
 }
 
+// 新增下拉阅读功能
+function initPullToRead() {
+    const reader = document.getElementById('fullscreen-reader');
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let currentScrollTop = 0;
 
+    reader.addEventListener('touchstart', (e) => {
+        currentScrollTop = window.scrollY;
+        if (currentScrollTop === 0) {
+            startY = e.touches[0].pageY;
+            isDragging = true;
+        }
+    }, { passive: true });
+
+    reader.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        
+        currentY = e.touches[0].pageY;
+        const deltaY = currentY - startY;
+        
+        // 只有在下拉时才处理
+        if (deltaY > 0 && currentScrollTop === 0) {
+            e.preventDefault();
+            
+            // 计算阻尼效果
+            const dragPercent = Math.min(1, deltaY / window.innerHeight);
+            const dragOffset = dragPercent * 100;
+            
+            // 应用视觉反馈
+            document.getElementById('reader-content').style.transform = `translateY(${dragOffset}px)`;
+            
+            // 当下拉足够距离时加载上一章
+            if (dragPercent > 0.3) {
+                loadPreviousChapter();
+                isDragging = false;
+            }
+        }
+    }, { passive: false });
+
+    reader.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        
+        // 恢复原位
+        document.getElementById('reader-content').style.transform = 'translateY(0)';
+        isDragging = false;
+    }, { passive: true });
+}
+
+function loadPreviousChapter() {
+    if (currentChapterIndex > 0) {
+        const prevChapter = currentNovel.volumes[currentVolumeIndex].chapters[currentChapterIndex - 1];
+        showChapterContent(
+            currentNovel.title,
+            currentNovel.volumes[currentVolumeIndex].title,
+            prevChapter,
+            currentChapterIndex - 1,
+            currentVolumeIndex
+        );
+    } else {
+        // 已经是第一章，回弹效果
+        const readerContent = document.getElementById('reader-content');
+        readerContent.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)';
+        readerContent.style.transform = 'translateY(0)';
+        
+        setTimeout(() => {
+            readerContent.style.transition = '';
+        }, 500);
+    }
+}
