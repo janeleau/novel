@@ -716,7 +716,7 @@ function loadPreviousChapter() {
 // 获取评论
 async function getComments() {
   const response = await fetch(
-    'https://raw.githubusercontent.com/用户名/仓库名/分支名/comments.json'
+    'https://raw.githubusercontent.com/janeleau/novel/comment.json'
   );
   return await response.json();
 }
@@ -729,7 +729,7 @@ async function postComment(newComment) {
   
   // 更新文件
   const response = await fetch(
-    'https://api.github.com/repos/janeleau/novel/contents/comment.json',
+    'https://api.github.com/repos/janeleau/novel/comment.json',
     {
       method: 'PUT',
       headers: {
@@ -746,5 +746,6 @@ async function postComment(newComment) {
   
   return await response.json();
 }
+
 
 
