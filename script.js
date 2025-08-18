@@ -713,5 +713,38 @@ function loadPreviousChapter() {
         }, 500);
     }
 }
+// 获取评论
+async function getComments() {
+  const response = await fetch(
+    'https://raw.githubusercontent.com/用户名/仓库名/分支名/comments.json'
+  );
+  return await response.json();
+}
+
+// 提交评论（需要GitHub Token）
+async function postComment(newComment) {
+  // 先获取现有评论
+  const comments = await getComments();
+  comments.push(newComment);
+  
+  // 更新文件
+  const response = await fetch(
+    'https://api.github.com/repos/janeleau/novel/contents/comment.json',
+    {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'token YOUR_GITHUB_TOKEN',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: '添加新评论',
+        content: btoa(JSON.stringify(comments)),
+        sha: '文件的当前SHA' // 需要先获取
+      })
+    }
+  );
+  
+  return await response.json();
+}
 
 
