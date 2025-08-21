@@ -747,18 +747,22 @@ async function postComment(newComment) {
   return await response.json();
 }
 
-// 在script.js中添加
 document.addEventListener('DOMContentLoaded', () => {
     initRainEffect();
     showNovelList();
     
-    // 为LOGO添加点击事件（不修改HTML的方案）
-    const logo = document.querySelector('.logo');
-    logo.style.cursor = 'pointer'; // 添加手型光标
-    logo.addEventListener('click', function(e) {
+    // 为LOGO添加首页导航功能
+    mainLogo.addEventListener('click', function(e) {
+        e.preventDefault();
+        showNovelList();
+    });
+    
+    // 为首页链接添加导航功能
+    homeLink.addEventListener('click', function(e) {
         e.preventDefault();
         showNovelList();
     });
 });
+
 
 
