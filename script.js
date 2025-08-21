@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 设置导航链接事件
     setupNavigation();
-    
+    setupHomeLink();
     // 设置搜索功能
     setupSearch();
     
@@ -724,6 +724,7 @@ function setupHomeLink() {
         location.reload(); // 直接刷新页面回到初始状态
     });
 }
+
 
 
 
