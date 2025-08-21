@@ -259,6 +259,7 @@ const novelModal = document.getElementById('novel-modal');
 const fullscreenReader = document.getElementById('fullscreen-reader');
 const closeBtns = document.querySelectorAll('.close-btn');
 const volumesContainer = document.getElementById('volumes-container');
+const homeLink = document.getElementById('home-link');
 
 // 当前阅读状态
 let currentNovelId = null;
@@ -713,56 +714,17 @@ function loadPreviousChapter() {
         }, 500);
     }
 }
-// 获取评论
-async function getComments() {
-  const response = await fetch(
-    'https://raw.githubusercontent.com/janeleau/novel/comment.json'
-  );
-  return await response.json();
-}
 
-// 提交评论（需要GitHub Token）
-async function postComment(newComment) {
-  // 先获取现有评论
-  const comments = await getComments();
-  comments.push(newComment);
-  
-  // 更新文件
-  const response = await fetch(
-    'https://api.github.com/repos/janeleau/novel/comment.json',
-    {
-      method: 'PUT',
-      headers: {
-        'Authorization': 'token YOUR_GITHUB_TOKEN',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        message: '添加新评论',
-        content: btoa(JSON.stringify(comments)),
-        sha: '文件的当前SHA' // 需要先获取
-      })
-    }
-  );
-  
-  return await response.json();
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-    initRainEffect();
-    showNovelList();
     
-    // 为LOGO添加首页导航功能
-    mainLogo.addEventListener('click', function(e) {
-        e.preventDefault();
-        showNovelList();
-    });
-    
-    // 为首页链接添加导航功能
+    // 简单的首页链接实现
+function setupHomeLink() {
     homeLink.addEventListener('click', function(e) {
         e.preventDefault();
-        showNovelList();
+        location.reload(); // 直接刷新页面回到初始状态
     });
-});
+}
+
 
 
 
