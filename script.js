@@ -527,7 +527,28 @@ function setupNavigation() {
             behavior: 'smooth'
         });
     });
-    
+    // 添加首页链接功能
+function setupHomeLink() {
+    homeLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // 隐藏所有特殊页面
+        novelSection.style.display = 'block';
+        aboutSection.style.display = 'none';
+        
+        // 显示所有小说
+        renderNovels(novelsData);
+        
+        // 滚动到顶部
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
+        // 清空搜索框
+        searchInput.value = '';
+    });
+}
     // 关于页面
     aboutLink.addEventListener('click', function(e) {
         e.preventDefault();
@@ -724,6 +745,7 @@ function setupHomeLink() {
         location.reload(); // 直接刷新页面回到初始状态
     });
 }
+
 
 
 
