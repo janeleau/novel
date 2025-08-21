@@ -27,7 +27,7 @@ header {
     z-index: 100;
 }
 
-.logo {
+.logo a {
     font-size: 1.5rem;
     font-weight: bold;
     color: #d35400;
@@ -466,3 +466,4 @@ main {
 .chapter-text {
     transition: transform 0.2s ease-out;
 }
+
