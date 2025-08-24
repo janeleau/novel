@@ -1,0 +1,16 @@
+{
+  "name": "novel-website",
+  "version": "1.0.0",
+  "description": "Jane的小说网站 with comment system",
+  "main": "script.js",
+  "scripts": {
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {},
+  "keywords": ["novel", "website", "comments"],
+  "author": "Jane",
+  "license": "MIT"
+}
