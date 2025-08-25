@@ -261,12 +261,23 @@ const closeBtns = document.querySelectorAll('.close-btn');
 const volumesContainer = document.getElementById('volumes-container');
 const homeLink = document.getElementById('home-link');
 
+
+// 评论相关DOM元素
+const commentAuthor = document.getElementById('comment-author');
+const commentContent = document.getElementById('comment-content');
+const submitCommentBtn = document.getElementById('submit-comment');
+const commentsList = document.getElementById('comments-list');
+
+
 // 当前阅读状态
 let currentNovelId = null;
 let currentNovel = null;
 let currentVolumeIndex = 0;
 let currentChapterIndex = 0;
 let rainInterval;
+let currentChapterTitle = '';
+let currentChapterIdentifier = '';
+
 
 // 生成阅读界面雨滴效果
 function createReaderRain() {
@@ -335,6 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 初始化阅读器控制
     initReaderControls();
+
 });
 
 /**
@@ -407,7 +419,7 @@ function showNovelDetails(novelId) {
     
     novelModal.style.display = 'block';
 }
-
+    
 /**
  * 显示章节列表
  * @param {number} novelId - 小说ID
@@ -476,7 +488,9 @@ function showChapterContent(novelTitle, volumeTitle, chapter, chapterIndex, volu
     // 更新导航按钮状态
     updateReaderNavButtons();
 initPullToRead();
-
+ 
+// 初始化Gitalk评论系统
+    initGitalk(novelTitle, volumeTitle, chapter.title);
 }
 
 /**
@@ -735,8 +749,6 @@ function loadPreviousChapter() {
         }, 500);
     }
 }
-
-
     
     // 简单的首页链接实现
 function setupHomeLink() {
@@ -746,8 +758,40 @@ function setupHomeLink() {
     });
 }
 
+/**
+ * 初始化Gitalk评论系统
+ */
+function initGitalk(novelTitle, volumeTitle, chapterTitle) {
+    // 清除之前的Gitalk实例
+    const gitalkContainer = document.getElementById('gitalk-container');
+    gitalkContainer.innerHTML = '';
+    
+    // 生成唯一ID（确保长度不超过50）
+    const id = `${currentNovelId}-${currentVolumeIndex}-${currentChapterIndex}`;
+    
+// 初始化Gitalk
+    const gitalk = new Gitalk({
+        clientID: 'Ov23liOn0q2fxXg6Ld2x', // 需要替换为实际值
+        clientSecret: '5d91e39ad3df8816e6ea8a87b3e260db95d93c28', // 需要替换为实际值
+        repo: 'comments', // 需要替换为实际值
+        owner: 'janeleau', // 需要替换为实际值
+        admin: ['janeleau'], // 需要替换为实际值
+        id: id, // 确保唯一且长度小于50
+        title: `${novelTitle} - ${volumeTitle} - ${chapterTitle}`,
+        distractionFreeMode: false,
+        language: 'zh-CN'
+    });
+    
+    // 渲染Gitalk
+    gitalk.render('gitalk-container');
+}        
 
-
-
-
+/**
+ * HTML转义函数
+ */
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
 
