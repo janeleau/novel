@@ -6,9 +6,11 @@
     <title>Jane的小说网站</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 添加Gitalk CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 </head>
 <body>
-    <!-- 页面主体结构 -->
+    <!-- 页面主体结构保持不变 -->
     <header>
         <div class="logo">
             <a href="#" id="home-link">Jane的小说网站</a>
@@ -71,18 +73,10 @@
                     <!-- 章节内容将在这里显示 -->
                 </div>
                 
-                <!-- 评论区 -->
+                <!-- 评论区 - 修改为Gitalk容器 -->
                 <div class="comments-section" id="comments-section">
                     <h3>读者评论</h3>
-                    <div class="comment-form">
-                        <input type="text" id="comment-author" placeholder="您的昵称（可选）" maxlength="20">
-                        <textarea id="comment-content" placeholder="写下您的评论..." rows="4" maxlength="500"></textarea>
-                        <button id="submit-comment" class="reader-btn">提交评论</button>
-                        <p class="comment-notice">评论将在审核后显示，感谢您的参与！</p>
-                    </div>
-                    <div class="comments-list" id="comments-list">
-                        <div class="comment-loading">加载评论中...</div>
-                    </div>
+                    <div id="gitalk-container"></div>
                 </div>
                 
                 <div class="chapter-navigation">
@@ -100,6 +94,8 @@
         </div>
     </footer>
 
+    <!-- 添加Gitalk JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
