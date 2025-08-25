@@ -565,3 +565,73 @@ main {
     color: #e74c3c;
     background: #ffeaea;
 }
+
+/* 原有样式保持不变... */
+
+/* Gitalk评论样式适配 */
+#gitalk-container {
+    margin-top: 20px;
+}
+
+.gt-container {
+    font-family: 'Microsoft YaHei', sans-serif !important;
+}
+
+.gt-header-textarea {
+    background-color: #fff9e6 !important;
+    border: 1px solid #f5d76e !important;
+    border-radius: 5px !important;
+}
+
+.gt-btn {
+    background-color: #f39c12 !important;
+    border: 1px solid #f39c12 !important;
+}
+
+.gt-btn-preview {
+    background-color: transparent !important;
+    color: #f39c12 !important;
+}
+
+.gt-popup {
+    background-color: #fff9e6 !important;
+    border: 1px solid #f5d76e !important;
+}
+
+.gt-user .gt-ico svg {
+    fill: #d35400 !important;
+}
+
+.gt-comment-username {
+    color: #d35400 !important;
+}
+
+.gt-comment-content {
+    background-color: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.gt-ico-github svg {
+    fill: #d35400 !important;
+}
+
+.gt-link {
+    color: #d35400 !important;
+    border-bottom: 1px dotted #d35400 !important;
+}
+
+.gt-avatar {
+    border-radius: 50% !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .gt-container {
+        padding: 0 10px !important;
+    }
+    
+    .gt-header-textarea {
+        font-size: 16px !important; /* 防止iOS缩放 */
+    }
+}
