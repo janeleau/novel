@@ -22,8 +22,6 @@
         </nav>
     </header>
 
-  
-
     <main>
         <!-- 搜索区域 -->
         <section class="search-section">
@@ -62,8 +60,7 @@
 
         <!-- 全屏阅读模态框 -->
         <div class="fullscreen-modal" id="fullscreen-reader" style="display: none;">
-              
- <div class="reader-controls">
+            <div class="reader-controls">
                 <button class="reader-btn" id="prev-chapter">上一章</button>
                 <button class="reader-btn" id="next-chapter">下一章</button>
                 <button class="reader-btn" id="close-reader">关闭</button>
@@ -73,6 +70,21 @@
                 <div class="chapter-text" id="reader-content">
                     <!-- 章节内容将在这里显示 -->
                 </div>
+                
+                <!-- 评论区 -->
+                <div class="comments-section" id="comments-section">
+                    <h3>读者评论</h3>
+                    <div class="comment-form">
+                        <input type="text" id="comment-author" placeholder="您的昵称（可选）" maxlength="20">
+                        <textarea id="comment-content" placeholder="写下您的评论..." rows="4" maxlength="500"></textarea>
+                        <button id="submit-comment" class="reader-btn">提交评论</button>
+                        <p class="comment-notice">评论将在审核后显示，感谢您的参与！</p>
+                    </div>
+                    <div class="comments-list" id="comments-list">
+                        <div class="comment-loading">加载评论中...</div>
+                    </div>
+                </div>
+                
                 <div class="chapter-navigation">
                     <button class="reader-btn" id="back-to-volumes">返回目录</button>
                 </div>
@@ -91,6 +103,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
